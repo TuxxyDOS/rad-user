@@ -7,7 +7,7 @@ A **Symfony bundle** to simply handle password encryption by [@KnpLabs](https://
 # Installation
 
 ```bash
-composer require tuxxydos/rad-user:~2.0
+composer require tuxxydos/knplabs-rad-user
 ```
 
 ```php
