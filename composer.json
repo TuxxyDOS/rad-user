@@ -1,6 +1,6 @@
 {
-    "name": "knplabs/rad-user",
-    "description": "Simply handle password encryption and salt generation",
+    "name": "tuxxydos/knplabs-rad-user",
+    "description": "Simply handle password encryption and NOT salt generation",
     "license": "MIT",
     "authors": [
         {
