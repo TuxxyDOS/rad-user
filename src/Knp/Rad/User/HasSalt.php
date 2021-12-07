@@ -12,12 +12,12 @@ interface HasSalt
     /**
      * @return string
      */
-    public function getSalt();
+    public function getSalt(): string;
 
     /**
      * @param string $salt
      *
      * @return HasSalt
      */
-    public function setSalt($salt);
+    public function setSalt(string $salt): HasSalt;
 }

@@ -14,7 +14,7 @@ trait HasInitialPassword
     /**
      * @return string
      */
-    public function getPlainPassword()
+    public function getPlainPassword(): string
     {
         return $this->plainPassword;
     }
@@ -24,7 +24,7 @@ trait HasInitialPassword
      *
      * @return self
      */
-    public function setPlainPassword($plainPassword)
+    public function setPlainPassword(string $plainPassword): self
     {
         $this->plainPassword = $plainPassword;
 

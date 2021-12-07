@@ -13,7 +13,7 @@ trait HasPassword
     /**
      * @return string
      */
-    public function getPassword()
+    public function getPassword(): string
     {
         return $this->password;
     }
@@ -23,7 +23,7 @@ trait HasPassword
      *
      * @return self
      */
-    public function setPassword($password)
+    public function setPassword(string $password): self
     {
         $this->password = $password;
 

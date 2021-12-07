@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Knp\Rad\User\EventListener\Persistence;
 
-use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\HasSalt;
 use Knp\Rad\User\Salt\Generator;
 

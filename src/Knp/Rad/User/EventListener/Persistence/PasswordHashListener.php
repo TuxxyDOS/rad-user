@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Knp\Rad\User\EventListener\Persistence;
 
-use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\HasPassword;
 use Knp\Rad\User\HasSalt;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
@@ -66,7 +66,7 @@ class PasswordHashListener
         }
     }
 
-    public function generatePassword(PasswordEncoderInterface $encoder, HasPassword $object)
+    public function generatePassword(PasswordEncoderInterface $encoder, HasPassword $object): string
     {
         $salt = '';
 

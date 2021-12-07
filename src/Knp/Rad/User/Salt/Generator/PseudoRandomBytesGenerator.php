@@ -16,7 +16,7 @@ class PseudoRandomBytesGenerator implements Generator
     /**
      * @param int $length
      */
-    public function __construct($length)
+    public function __construct(int $length)
     {
         $this->length = $length;
     }
@@ -24,7 +24,7 @@ class PseudoRandomBytesGenerator implements Generator
     /**
      * {@inheritdoc}
      */
-    public function generate()
+    public function generate(): string
     {
         return openssl_random_pseudo_bytes($this->length);
     }

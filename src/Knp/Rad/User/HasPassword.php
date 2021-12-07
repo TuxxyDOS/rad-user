@@ -11,22 +11,22 @@ interface HasPassword
      *
      * @return HasPassword
      */
-    public function setPassword($password);
+    public function setPassword(string $password): HasPassword;
 
     /**
      * @return string
      */
-    public function getPlainPassword();
+    public function getPlainPassword(): string;
 
     /**
      * @param string $plainPassword
      *
      * @return HasPassword
      */
-    public function setPlainPassword($plainPassword);
+    public function setPlainPassword(string $plainPassword): HasPassword;
 
     /**
      * @return HasPassword
      */
-    public function eraseCredentials();
+    public function eraseCredentials(): HasPassword;
 }

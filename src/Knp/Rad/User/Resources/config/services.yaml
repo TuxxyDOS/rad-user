@@ -10,21 +10,6 @@ services:
   Knp\Rad\User\EventListener\ODM\PasswordHashListener:
     arguments:
       - '@Knp\Rad\User\EventListener\Persistence\PasswordHashListener'
-    tags:
-      - name: doctrine_mongodb.odm.event_listener
-        event: prePersist
-        method: prePersist
-        priority: 100
-      - name: doctrine_mongodb.odm.event_listener
-        event: preUpdate
-        method: preUpdate
-      - name: doctrine_couchdb.event_listener
-        event: prePersist
-        method: prePersist
-        priority: 100
-      - name: doctrine_couchdb.event_listener
-        event: preUpdate
-        method: preUpdate
 
   Knp\Rad\User\EventListener\Persistence\PasswordHashListener:
     arguments:
@@ -46,14 +31,6 @@ services:
         event: prePersist
         method: prePersist
         priority: 200
-      - name: doctrine_mongodb.odm.event_listener
-        event: prePersist
-        method: prePersist
-        priority: 200
-      - name: doctrine_couchdb.event_listener
-        event: prePersist
-        method: prePersist
-        priority: 200
 
   Knp\Rad\User\EventListener\Persistence\SaltGenerationListener:
     arguments:
@@ -63,15 +40,6 @@ services:
         event: prePersist
         method: prePersist
         priority: 200
-      - name: doctrine_mongodb.odm.event_listener
-        event: prePersist
-        method: prePersist
-        priority: 200
-      - name: doctrine_couchdb.event_listener
-        event: prePersist
-        method: prePersist
-        priority: 200
-
   Knp\Rad\User\Salt\Generator\PseudoRandomBytesGenerator:
     arguments:
       - '%knp_rad_user.salt.generator.random_bytes.length%'

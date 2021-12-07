@@ -9,7 +9,7 @@ trait HasSalt
     /**
      * @return string
      */
-    public function getSalt()
+    public function getSalt(): string
     {
         return $this->salt;
     }
@@ -19,7 +19,7 @@ trait HasSalt
      *
      * @return self
      */
-    public function setSalt($salt)
+    public function setSalt(string $salt): self
     {
         $this->salt = $salt;
 

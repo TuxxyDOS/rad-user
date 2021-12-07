@@ -9,5 +9,5 @@ interface Generator
     /**
      * @return string
      */
-    public function generate();
+    public function generate(): string;
 }

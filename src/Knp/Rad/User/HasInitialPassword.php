@@ -9,12 +9,12 @@ interface HasInitialPassword
     /**
      * @return string
      */
-    public function getPlainPassword();
+    public function getPlainPassword(): string;
 
     /**
      * @param string $plainPassword
      *
      * @return HasInitialPassword
      */
-    public function setPlainPassword($plainPassword);
+    public function setPlainPassword(string $plainPassword): HasInitialPassword;
 }
