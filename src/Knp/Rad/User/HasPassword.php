@@ -11,7 +11,7 @@ interface HasPassword
      *
      * @return HasPassword
      */
-    public function setPassword(string $password): HasPassword;
+    public function setPassword(string $password);
 
     /**
      * @return string
@@ -23,10 +23,10 @@ interface HasPassword
      *
      * @return HasPassword
      */
-    public function setPlainPassword(string $plainPassword): HasPassword;
+    public function setPlainPassword(string $plainPassword);
 
     /**
      * @return HasPassword
      */
-    public function eraseCredentials(): HasPassword;
+    public function eraseCredentials();
 }
