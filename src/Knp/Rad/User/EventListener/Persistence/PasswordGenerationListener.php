@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Knp\Rad\User\EventListener\Persistence;
 
-use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
+use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Knp\Rad\User\HasInitialPassword;
 use Knp\Rad\User\Password\Generator;
 use Knp\Rad\User\Password\Generator\UniqidGenerator;
