@@ -16,7 +16,7 @@ interface HasPassword
     /**
      * @return string
      */
-    public function getPlainPassword(): string;
+    public function getPlainPassword(): ?string;
 
     /**
      * @param string $plainPassword
