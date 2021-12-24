@@ -13,10 +13,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 class PasswordHashListener
 {
-    /**
-     * @var EncoderFactoryInterface
-     */
-    private $encoderFactory;
+    private EncoderFactoryInterface $encoderFactory;
 
     public function __construct(EncoderFactoryInterface $encoderFactory)
     {
@@ -56,7 +53,7 @@ class PasswordHashListener
         $this->updatePasswordHash($object);
     }
 
-    private function updatePasswordHash(HasPassword $object)
+    private function updatePasswordHash($object)
     {
         $password = $this->generatePassword($this->encoderFactory->getEncoder($object), $object);
         $object->setPassword($password);

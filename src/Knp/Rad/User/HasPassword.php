@@ -6,27 +6,11 @@ namespace Knp\Rad\User;
 
 interface HasPassword
 {
-    /**
-     * @param string $password
-     *
-     * @return HasPassword
-     */
-    public function setPassword(string $password);
+    public function setPassword(string $password): HasPassword;
 
-    /**
-     * @return string
-     */
     public function getPlainPassword(): ?string;
 
-    /**
-     * @param string $plainPassword
-     *
-     * @return HasPassword
-     */
-    public function setPlainPassword(string $plainPassword);
+    public function setPlainPassword(string $plainPassword): HasPassword;
 
-    /**
-     * @return HasPassword
-     */
-    public function eraseCredentials();
+    public function eraseCredentials(): HasPassword;
 }
