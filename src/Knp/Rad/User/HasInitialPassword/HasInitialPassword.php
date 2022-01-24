@@ -6,7 +6,7 @@ namespace Knp\Rad\User\HasInitialPassword;
 
 trait HasInitialPassword
 {
-    protected ?string $plainPassword;
+    protected ?string $plainPassword = null;
 
     public function getPlainPassword(): ?string
     {

@@ -10,7 +10,7 @@ trait HasPassword
 {
     use HasInitialPassword;
 
-    protected ?string $password;
+    protected ?string $password = null;
 
     public function getPassword(): ?string
     {
