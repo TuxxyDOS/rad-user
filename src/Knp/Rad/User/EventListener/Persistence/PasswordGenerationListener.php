@@ -25,13 +25,11 @@ class PasswordGenerationListener
     {
         $object = $event->getObject();
 
-        if (false === $object instanceof HasInitialPassword) {
+        if (false === $object instanceof HasInitialPassword)
             return false;
-        }
 
-        if (null !== $object->getPlainPassword()) {
+        if (null !== $object->getPlainPassword())
             return false;
-        }
 
         $plainPassword = $this->generator->generate();
         $object->setPlainPassword($plainPassword);

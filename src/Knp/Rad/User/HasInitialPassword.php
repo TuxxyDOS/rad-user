@@ -8,5 +8,5 @@ interface HasInitialPassword
 {
     public function getPlainPassword(): ?string;
 
-    public function setPlainPassword(string $plainPassword): HasInitialPassword;
+    public function setPlainPassword(?string $plainPassword): HasInitialPassword;
 }

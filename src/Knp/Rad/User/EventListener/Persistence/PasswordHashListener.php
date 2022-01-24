@@ -42,13 +42,11 @@ class PasswordHashListener
 
     private function process($object)
     {
-        if (false === $object instanceof HasPassword) {
+        if (false === $object instanceof HasPassword)
             return false;
-        }
 
-        if (null === $object->getPlainPassword()) {
+        if (null === $object->getPlainPassword())
             return false;
-        }
 
         $this->updatePasswordHash($object);
     }
@@ -58,18 +56,16 @@ class PasswordHashListener
         $password = $this->generatePassword($this->encoderFactory->getEncoder($object), $object);
         $object->setPassword($password);
 
-        if ($object instanceof UserInterface) {
+        if ($object instanceof UserInterface)
             $object->eraseCredentials();
-        }
     }
 
     public function generatePassword(PasswordEncoderInterface $encoder, HasPassword $object): string
     {
         $salt = '';
 
-        if ((true === $object instanceof HasSalt) || (true === $object instanceof UserInterface)) {
+        if ((true === $object instanceof HasSalt) || (true === $object instanceof UserInterface))
             $salt = $object->getSalt();
-        }
 
         return $encoder->encodePassword($object->getPlainPassword(), $salt);
     }

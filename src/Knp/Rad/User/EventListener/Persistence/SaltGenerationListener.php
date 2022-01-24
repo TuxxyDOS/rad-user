@@ -24,13 +24,11 @@ class SaltGenerationListener
     {
         $object = $event->getObject();
 
-        if (false === $object instanceof HasSalt) {
+        if (false === $object instanceof HasSalt)
             return false;
-        }
 
-        if (null !== $object->getSalt()) {
+        if (null !== $object->getSalt())
             return false;
-        }
 
         $salt = $this->generator->generate();
         $object->setSalt($salt);
